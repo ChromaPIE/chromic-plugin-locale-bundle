@@ -1,0 +1,16 @@
+#
+# Pointy Reforge
+#
+
+name: "<gradient:#076585>锐利尖刺</gradient:#ffffff>"
+enabled: true
+description: "造成的伤害提升 &a10%&r"
+
+stone-config:
+  requires-stone: false
+  texture: ''
+  craftable: false
+  recipe: []
+
+config:
+  multiplier: 1.10 # Damage multiplier

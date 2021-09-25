@@ -1,0 +1,16 @@
+#
+# Nautical Reforge
+#
+
+name: "<gradient:#373B44>深水暗锥</gradient:#4286f4>"
+enabled: true
+description: "在水中发射时造成的伤害提升 &a20%&r"
+
+stone-config:
+  requires-stone: false
+  texture: ''
+  craftable: false
+  recipe: []
+
+config:
+  multiplier: 1.2 # Damage multiplier

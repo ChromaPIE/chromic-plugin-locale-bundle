@@ -1,0 +1,20 @@
+messages:
+  prefix: "&3&lReforges&r &8» &r"
+  no-permission: "&c你没有权限这样做！"
+  not-player: "&c该命令必须由玩家执行"
+  invalid-command: "&c子命令无效！"
+  reloaded: "重载成功！"
+  insufficient-money: "&c金钱不足！"
+  insufficient-xp: "&c经验值不足！"
+  applied-reforge: "已加持重铸【%reforge%&r】！"
+  needs-player: "&c你必须指定一个玩家"
+  invalid-player: "&c玩家无效！"
+  needs-stone: "&c你必须指定一个重铸之石"
+  invalid-stone: "&c重铸属性无效！"
+  give-success: "已将重铸之石【&a%reforge%&r】给予&a%recipient%"
+
+menu:
+  title: "物品重铸"
+  close: "&c关闭"
+
+description-color: "&7&o"

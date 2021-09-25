@@ -1,0 +1,16 @@
+#
+# Reinforced Reforge
+#
+
+name: "<gradient:#FBD786>强硬防御</gradient:#f7797d>"
+enabled: true
+description: "受到的伤害削减 &a4%&r"
+
+stone-config:
+  requires-stone: false
+  texture: ''
+  craftable: false
+  recipe: []
+
+config:
+  multiplier: 0.96 # Damage taken multiplier

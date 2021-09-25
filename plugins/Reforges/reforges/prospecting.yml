@@ -1,0 +1,17 @@
+#
+# Prospecting Reforge
+#
+
+name: "<gradient:#00B4DB>掘金勘探</gradient:#0083B0>"
+enabled: true
+description: "有 &a5%&r 的几率在采掘方块后获得 &e$2&f"
+
+stone-config:
+  requires-stone: false
+  texture: ''
+  craftable: false
+  recipe: []
+
+config:
+  chance: 5
+  money: 2

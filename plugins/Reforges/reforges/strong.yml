@@ -1,0 +1,17 @@
+#
+# Strong Reforge
+#
+
+name: "<gradient:#ED213A>强力攻击</gradient:#93291E>"
+enabled: true
+description: "造成 &a2%&r 的额外伤害并使击退效果提升 &a10%&r"
+
+stone-config:
+  requires-stone: false
+  texture: ''
+  craftable: false
+  recipe: []
+
+config:
+  multiplier: 1.03 # Damage multiplier
+  knockback-multiplier: 1.1

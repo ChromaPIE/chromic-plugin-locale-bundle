@@ -1,0 +1,16 @@
+#
+# Versatile Reforge
+#
+
+name: "<gradient:#ED4264>搏击能手</gradient:#FFEDBC>"
+enabled: true
+description: "造成的近战伤害提升 &a45%&r"
+
+stone-config:
+  requires-stone: false
+  texture: ''
+  craftable: false
+  recipe: []
+
+config:
+  multiplier: 1.45 # Damage multiplier

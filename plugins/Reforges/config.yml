@@ -1,0 +1,198 @@
+#
+# Reforges
+# by Auxilor
+#
+
+discover-recipes: true
+
+gui:
+  rows: 6
+
+  mask:
+    # The way the mask works is by having a list of materials
+    # And then a pattern to use those materials.
+
+    # The pattern is the rows in the GUI
+    # Each line must be 9 long, and the amount of rows should be the amount of rows in the GUI
+    # A zero represents nothing
+    # A 1 represents the first material
+    # A 2 represents the second material
+    # And so on, you can add up to 9.
+
+    materials:
+      - black_stained_glass_pane
+      - magenta_stained_glass_pane
+    pattern:
+      - "011111110"
+      - "012202210"
+      - "012111210"
+      - "010111010"
+      - "011111110"
+      - "011101110"
+  show-allowed:
+    allow-material: lime_stained_glass_pane
+    deny-material: red_stained_glass_pane
+
+    # 1 is a show-allowed slot,
+    # 0 is not.
+    pattern:
+      - "100000001"
+      - "100000001"
+      - "100000001"
+      - "100000001"
+      - "100000001"
+      - "100000001"
+
+  stone-slot:
+    row: 4
+    column: 7
+
+  item-slot:
+    row: 4
+    column: 3
+
+  close:
+    material: barrier
+    location:
+      row: 6
+      column: 5
+
+  # Placeholders:
+  # %cost% - The economy cost
+  # %xp% - The levels required
+
+  allow:
+    material: anvil
+    name: "&a物品重铸"
+    lore:
+      - '&7重铸左侧槽位中的物品，为其'
+      - '&7加持一个随机的数值增益属性。'
+      - ''
+      - '&7花费'
+      - '&6$%cost%'
+      - ''
+      - '&e点击重铸！'
+  allow-stone:
+    material: anvil
+    name: "&a物品重铸"
+    lore:
+      - '&7使用重铸之石来重铸左侧槽位中的物品'
+      - '&7，为其加持【%stone%】重铸属性，使其'
+      - '&7获得数值增益。'
+      - ''
+      - '&7花费'
+      - '&6$%cost%'
+      - ''
+      - '&e点击重铸！'
+  no-item:
+    material: anvil
+    name: "&e物品重铸"
+    lore:
+      - '&7将物品置于右侧槽位来加持重铸！'
+      - '&7重铸后的物品将获得一个随机的'
+      - '&7数值增益属性'
+  invalid-item:
+    material: barrier
+    name: "&c错误！"
+    lore:
+      - '&7你无法重铸该物品！'
+
+  sound:
+    id: BLOCK_ANVIL_USE
+    pitch: 1
+
+  open-sound:
+    id: BLOCK_ANVIL_PLACE
+    pitch: 0.8
+
+  stone-sound:
+    id: ENTITY_ENDER_DRAGON_HURT
+    pitch: 0.5
+
+  insufficient-money-sound:
+    id: ENTITY_VILLAGER_NO
+    pitch: 0.8
+
+reforge:
+  cost: 7500
+  xp-cost: 0 # In levels
+
+  cost-exponent: 1.15 # (Reforges done ^ cost exponent) * cost
+
+  line-wrap: 32
+
+  show-reforgable: true
+  reforgable-suffix:
+    - ""
+    - "&8该物品可被重铸！"
+
+  display-in-lore: true
+
+  stone:
+    name: "&f重铸之石【&r%reforge%&f】"
+    lore:
+      - "&7将其置于菜单右侧的槽位来加持"
+      - "&7【&r%reforge%&7】重铸属性！"
+
+targets:
+  pickaxe:
+    - wooden_pickaxe
+    - stone_pickaxe
+    - iron_pickaxe
+    - golden_pickaxe
+    - diamond_pickaxe
+    - netherite_pickaxe
+  axe:
+    - wooden_axe
+    - stone_axe
+    - iron_axe
+    - golden_axe
+    - diamond_axe
+    - netherite_axe
+  melee:
+    - wooden_axe
+    - stone_axe
+    - iron_axe
+    - golden_axe
+    - diamond_axe
+    - netherite_axe
+    - wooden_sword
+    - stone_sword
+    - iron_sword
+    - golden_sword
+    - diamond_sword
+    - netherite_sword
+  trident:
+    - trident
+  bow:
+    - bow
+    - crossbow
+  armor:
+    - turtle_helmet
+    - leather_helmet
+    - chainmail_helmet
+    - iron_helmet
+    - golden_helmet
+    - diamond_helmet
+    - netherite_helmet
+
+    - leather_chestplate
+    - chainmail_chestplate
+    - iron_chestplate
+    - golden_chestplate
+    - diamond_chestplate
+    - netherite_chestplate
+
+    - leather_leggings
+    - chainmail_leggings
+    - iron_leggings
+    - golden_leggings
+    - diamond_leggings
+    - netherite_leggings
+
+    - leather_boots
+    - chainmail_boots
+    - iron_boots
+    - golden_boots
+    - diamond_boots
+    - netherite_boots

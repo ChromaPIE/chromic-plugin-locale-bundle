@@ -1,0 +1,18 @@
+#
+# Light Reforge
+#
+
+name: "<gradient:#1c92d2>羽量轻刃</gradient:#f2fcfe>"
+enabled: true
+description: "造成的伤害与击退效果削减 &a5%&r，但攻击速度提升 &a3%&7&o。"
+
+stone-config:
+  requires-stone: false
+  texture: ''
+  craftable: false
+  recipe: []
+
+config:
+  multiplier: 0.95 # Damage multiplier
+  speed-multiplier: 1.03
+  knockback-multiplier: 0.95
