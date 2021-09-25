@@ -1,0 +1,157 @@
+DecimalFormate: '#.##'
+TestDummy:
+  name: '&6训练假人'
+  nameVisible: false
+  invisibleArmorStand: true
+  basePlate: false
+  particles:
+    enable: true
+    amount: 4
+    damageMultiple: true
+    maxParticleAmount: 200
+  shakeHead: true
+  removeArrowOnHit: true
+  projectileMessage:
+    enable: true
+    message: '&8[&4&l⊹&8]&e 你在 &6%distance%&e 米开外击中了目标的&6%part%&e！'
+    part:
+      head: 头部
+      body: 胸部
+      legs: 腿部
+  onDamage:
+    entityToSpawn: ZOMBIE
+    withoutArmorDisplay: '%name% &c-%damage% '
+    withArmorDisplay: '%name% &c-%damage% &8| &b-%finalDamage%'
+    changeArmorDurability: true
+    displayTime: 40
+  emptyArmorSlot:
+    name: '&6空槽位'
+    lore:
+    - '&7将发射器置于假人正下方'
+    - '&7并将装备放入其中，便能'
+    - '&7为假人应用这些装备！'
+    - '&7若要移除装备，只需将其'
+    - '&7拿出发射器即可！'
+  crafting:
+    enable: true
+    permission:
+      needs: true
+      permission: battletraining.craft.frame
+      noPermMessage: '&4你没有合成该物品的权限！！！'
+    shape:
+      line1: ' H '
+      line2: WHW
+      line3: ' F '
+    items:
+      H: HAY_BLOCK
+      W: WHEAT
+      F: OAK_FENCE
+TrainingMode:
+  busyMessage: '&8[&4&l⊹&8]&c 该假人已被其他玩家占用！！'
+  countdown:
+    time: 3
+    dummyName: '&6&c%time%&6 秒后开始训练'
+    message: ''
+  start:
+    dummyName: '&6训练开始！！！'
+    message: ''
+  training:
+    dummyName: '&c-%last_damage% &8|&e %time_left% 秒'
+  stop:
+    messages:
+    - '&8[&4&l⊹&8]&e 本次训练已结束'
+    - '&8=============== &6训练统计数据 &8==============='
+    - '&7☞ 总计时长：&e%time_passed%'
+    - '&7☞ 总计伤害：&e%total_damage%'
+    - '&7☞ 伤害峰值：&e%max_damage%'
+    - '&7☞ 伤害谷值：&e%min_damage%'
+    - '&7☞ 每秒伤害：&e%dps%'
+    - '&7☞ 平均伤害：&e%average_damage%'
+    - '&7☞ 击中总数：&e%hits%'
+    - '&8=============== =============== ==============='
+TrainGUI:
+  Home:
+    options:
+      material: clock
+      name: '&6⚔ &e训练选项 &6⚔'
+  BackItem:
+    material: yellow_wool
+    name: '&6☜ &e返回'
+  TrainOptions:
+    option1:
+      time: 15
+      material: clock
+      name: '&6☞ &d菜鸟训练'
+      lore:
+      - '&7 时长：&e15 秒'
+    option2:
+      time: 30
+      material: clock
+      name: '&6☞ &e低强度训练'
+      lore:
+      - '&7 时长：&e30 秒'
+    option3:
+      time: 60
+      material: clock
+      name: '&6☞ &6中强度训练'
+      lore:
+      - '&7 时长：&e60 秒'
+    option4:
+      time: 90
+      material: clock
+      name: '&6☞ &c高强度训练'
+      lore:
+      - '&7 时长：&e90 秒'
+    option5:
+      time: 120
+      material: clock
+      name: '&6☞ &4神级训练'
+      lore:
+      - '&7 时长：&e120 秒'
+TargetFrame:
+  image: https://i.imgur.com/jw5808y.png
+  item:
+    mapID: 1
+    name: '&c标靶'
+    lore:
+    - '&7将该物品放置在物品展示框中，'
+    - '&7瞄准目标并射击。看看你是否是'
+    - '&7一名合格的神射手'
+  crafting:
+    enable: true
+    permission:
+      needs: true
+      permission: battletraining.craft.frame
+      noPermMessage: '&4你没有合成该物品的权限！！！'
+    shape:
+      line1: PIP
+      line2: IPI
+      line3: PIP
+    items:
+      P: PAPER
+      I: REDSTONE
+TargetBlock:
+  holoDisplay:
+    enable: true
+    display: '&e%points% 环 &8[&6%distance%m&8]'
+    displayTime: 40
+  message:
+    enable: true
+    message: '&8[&4&l⊹&8]&e 你在 &6%distance%&e 米开外击中了标靶的 &6%points%&e 环！'
+  points:
+    '0': 0
+    '1': 1
+    '2': 2
+    '3': 3
+    '4': 4
+    '5': 5
+    '6': 6
+    '7': 7
+    '8': 8
+    '9': 9
+    '10': 10
+    '11': 11
+    '12': 12
+    '13': 13
+    '14': 14
+    '15': 15
