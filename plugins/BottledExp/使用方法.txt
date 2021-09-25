@@ -1,0 +1,5 @@
+- 放入文件后，修改该插件的配置文件 config.yml 中的 Language 为 ZHCN
+
+- 执行 /bottle reload 命令
+
+- 完成
