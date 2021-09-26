@@ -133,11 +133,11 @@ TargetFrame:
 TargetBlock:
   holoDisplay:
     enable: true
-    display: '&e%points% 环 &8[&6%distance%m&8]'
+    display: '&e%points% 分 &8[&6%distance%m&8]'
     displayTime: 40
   message:
     enable: true
-    message: '&8[&4&l⊹&8]&e 你在 &6%distance%&e 米开外击中了标靶的 &6%points%&e 环！'
+    message: '&8[&4&l⊹&8]&e 你在 &6%distance%&e 米开外击中了标靶，获得 &6%points%&e 分！'
   points:
     '0': 0
     '1': 1
