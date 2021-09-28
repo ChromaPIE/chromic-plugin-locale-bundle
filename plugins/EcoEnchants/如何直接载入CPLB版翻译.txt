@@ -1,7 +1,16 @@
 - 确保拥有服务器权限
 
-- 在控制台或聊天栏执行命令 /ecoenchants locale download mikugesura
+- 在控制台或聊天栏执行命令 /ecoenchants locale download kacilelura
 
 - 执行命令 /ecoenchants reload
 
 - 完成
+
+拓展支持情况：
+	不支持：
+		Fling（资源过旧）
+		Chyzman's Artifacts（收费闭源）
+		Chyzman's Teleportation（收费闭源）
+		MMO（收费闭源）
+		Exo Jump（收费闭源）
+		同捆包 - Mega Enchantment Bundle（收费闭源）
