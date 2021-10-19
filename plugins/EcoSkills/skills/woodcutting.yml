@@ -1,0 +1,67 @@
+name: "伐木"
+description: "通过砍伐树木来获取伐木经验值"
+max-level: 50
+
+gui:
+  item: jungle_sapling
+  position:
+    row: 3
+    column: 7
+  lore:
+    - "&f受益数值："
+    - "&8» &r%ecoskills_strength_name%"
+    - "&8» &r%ecoskills_crit_damage_name%"
+    - "&f"
+    - "&f效果："
+    - "&8» &r&6精工细作 %ecoskills_craftsmanship_numeral%"
+    - "   %ecoskills_craftsmanship_description%"
+    - "&8» &r&6伐木大师 %ecoskills_master_lumberjack_numeral%"
+    - "   %ecoskills_master_lumberjack_description%"
+
+rewards:
+  # The actual rewards to be given
+  rewards:
+    - "strength::2"
+    - "crit_damage::1"
+    - "craftsmanship::1"
+    - "master_lumberjack::1"
+
+  level-commands: []
+
+  # The chat messages to send on level up
+  chat-messages:
+    1:
+      - " &8» &r&f+2 %ecoskills_strength_name%"
+      - " &8» &r&f+1 %ecoskills_crit_damage_name%"
+      - " &8» &r&6精工细作 %ecoskills_craftsmanship_numeral%"
+      - "    %ecoskills_craftsmanship_description%"
+      - " &8» &r&6伐木大师 %ecoskills_master_lumberjack_numeral%"
+      - "    %ecoskills_master_lumberjack_description%"
+
+  # The lore to show in the levels gui
+  progression-lore:
+    1:
+      - " &8» &r&f+2 %ecoskills_strength_name%"
+      - " &8» &r&f+1 %ecoskills_crit_damage_name%"
+      - " &8» &r&6精工细作 %ecoskills_craftsmanship_numeral%"
+      - "    %ecoskills_craftsmanship_description%"
+      - " &8» &r&6伐木大师 %ecoskills_master_lumberjack_numeral%"
+      - "    %ecoskills_master_lumberjack_description%"
+
+# The xp rewards for each crop type
+# Specify with type:xp
+xp-rewards:
+  - "oak_log:6"
+  - "birch_log:6"
+  - "spruce_log:6"
+  - "jungle_log:6"
+  - "acacia_log:6"
+  - "dark_oak_log:6"
+  - "oak_wood:6"
+  - "birch_wood:6"
+  - "spruce_wood:6"
+  - "jungle_wood:6"
+  - "acacia_wood:6"
+  - "dark_oak_wood:6"
+  - "crimson_stem:14"
+  - "warped_stem:14"

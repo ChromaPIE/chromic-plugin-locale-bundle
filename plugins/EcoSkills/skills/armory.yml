@@ -1,0 +1,74 @@
+name: "防御"
+description: "通过承受伤害来获取防御经验值"
+max-level: 50
+
+gui:
+  item: iron_chestplate
+  position:
+    row: 4
+    column: 6
+  lore:
+    - "&f受益数值："
+    - "&8» &r%ecoskills_defense_name%"
+    - "&8» &r%ecoskills_speed_name%"
+    - "&f"
+    - "&f效果："
+    - "&8» &r&6萨满教徒 %ecoskills_shamanism_numeral%"
+    - "   %ecoskills_shamanism_description%"
+    - "&8» &r&6狱火抗性 %ecoskills_infernal_resistance_numeral%"
+    - "   %ecoskills_infernal_resistance_description%"
+    - "&8» &r&6无畏之心 %ecoskills_bravery_numeral%"
+    - "   %ecoskills_bravery_description%"
+
+rewards:
+  # The actual rewards to be given
+  rewards:
+    - "defense::2"
+    - "speed::1"
+    - "shamanism::1"
+    - "infernal_resistance::1"
+    - "bravery::1:10:100"
+
+  level-commands: []
+
+  # The chat messages to send on level up
+  chat-messages:
+    1:
+      - " &8» &r&f+2 %ecoskills_defense_name%"
+      - " &8» &r&f+1 %ecoskills_speed_name%"
+      - " &8» &r&6萨满教徒 %ecoskills_shamanism_numeral%"
+      - "    %ecoskills_shamanism_description%"
+      - " &8» &r&6狱火抗性 %ecoskills_infernal_resistance_numeral%"
+      - "    %ecoskills_infernal_resistance_description%"
+    10:
+      - " &8» &r&f+2 %ecoskills_defense_name%"
+      - " &8» &r&f+1 %ecoskills_speed_name%"
+      - " &8» &r&6萨满教徒 %ecoskills_shamanism_numeral%"
+      - "    %ecoskills_shamanism_description%"
+      - " &8» &r&6狱火抗性 %ecoskills_infernal_resistance_numeral%"
+      - "    %ecoskills_infernal_resistance_description%"
+      - " &8» &r&6无畏之心 %ecoskills_bravery_numeral%"
+      - "    %ecoskills_bravery_description%"
+
+  # The lore to show in the levels gui
+  progression-lore:
+    1:
+      - " &8» &r&f+2 %ecoskills_defense_name%"
+      - " &8» &r&f+1 %ecoskills_speed_name%"
+      - " &8» &r&6萨满教徒 %ecoskills_shamanism_numeral%"
+      - "    %ecoskills_shamanism_description%"
+      - " &8» &r&6狱火抗性 %ecoskills_infernal_resistance_numeral%"
+      - "    %ecoskills_infernal_resistance_description%"
+    10:
+      - " &8» &r&f+2 %ecoskills_defense_name%"
+      - " &8» &r&f+1 %ecoskills_speed_name%"
+      - " &8» &r&6萨满教徒 %ecoskills_shamanism_numeral%"
+      - "    %ecoskills_shamanism_description%"
+      - " &8» &r&6狱火抗性 %ecoskills_infernal_resistance_numeral%"
+      - "    %ecoskills_infernal_resistance_description%"
+      - " &8» &r&6无畏之心 %ecoskills_bravery_numeral%"
+      - "    %ecoskills_bravery_description%"
+
+
+# The experience to give for each hp of damage taken
+xp-per-hp: 0.72

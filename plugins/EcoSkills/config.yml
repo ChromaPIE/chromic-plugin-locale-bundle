@@ -1,0 +1,255 @@
+# 
+# EcoSkills
+# by Auxilor
+mysql:
+  enabled: false
+  host: localhost
+  port: 3306
+  database: database
+  user: username
+  password: passy
+gui:
+  rows: 6
+  line-wrap: 40
+  mask:
+    materials:
+    - black_stained_glass_pane
+    pattern:
+    - '111101111'
+    - '111111111'
+    - '110000011'
+    - '110010011'
+    - '111111111'
+    - '111101111'
+  player-info:
+    row: 1
+    column: 5
+    name: '&f%player%&f的&f属性数值：'
+    lore:
+    - '&f'
+    - ' %ecoskills_defense_name%&f %ecoskills_defense%'
+    - ' %ecoskills_strength_name%&f %ecoskills_strength%'
+    - ' %ecoskills_crit_chance_name%&f %ecoskills_crit_chance%%'
+    - ' %ecoskills_crit_damage_name%&f %ecoskills_crit_damage%'
+    - ' %ecoskills_speed_name%&f %ecoskills_speed%'
+    - ' %ecoskills_wisdom_name%&f %ecoskills_wisdom%'
+    - ' %ecoskills_ferocity_name%&f %ecoskills_ferocity%'
+    - '&f'
+    - '&7总计技能等级：&f%ecoskills_total_skill_level%'
+    - '&7平均技能等级：&f%ecoskills_average_skill_level%'
+  close:
+    material: barrier
+    name: '&c关闭'
+    location:
+      row: 6
+      column: 5
+  skill-icon:
+    name: '&#ff00ae%skill% &d%level_numeral%'
+    lore:
+    - '&8&o%description%'
+    - '&f'
+    - '%skill_specific%'
+    - '&f'
+    - '&f升级进度：'
+    - '&8» &e%percentage_progress%'
+    - '&8» &e%current_xp%&8/&7%required_xp% &fXP'
+    - '&f'
+    - '&e点击以查看等级进度！'
+level-gui:
+  rows: 6
+  mask:
+    materials:
+    - black_stained_glass_pane
+    pattern:
+    - '111111111'
+    - '111111111'
+    - '111111111'
+    - '111111111'
+    - '111111111'
+    - '111111111'
+  progression-slots:
+    pattern:
+    - 109ab0jkl
+    - 2080c0i0m
+    - 3070d0h0n
+    - 4560efg0o
+    - 00000000p
+    - 00000000q
+    level-as-amount: true
+    prev-page:
+      material: arrow
+      name: '&f上一页'
+      location:
+        row: 6
+        column: 4
+    next-page:
+      material: arrow
+      name: '&f下一页'
+      location:
+        row: 6
+        column: 6
+    close:
+      material: barrier
+      name: '&c关闭'
+      location:
+        row: 6
+        column: 5
+    unlocked:
+      material: lime_stained_glass_pane
+      name: '&a%skill% 等级 %level_numeral%'
+      lore:
+      - '&f'
+      - '&f奖励：'
+      - '%rewards%'
+      - '&f'
+      - '&a已解锁'
+    in-progress:
+      material: yellow_stained_glass_pane
+      name: '&e%skill% 等级 %level_numeral%'
+      lore:
+      - '&f'
+      - '&f奖励：'
+      - '%rewards%'
+      - '&f'
+      - '&f进度：'
+      - '&8» &e%percentage_progress%'
+      - '&8» &e%current_xp%&8/&7%required_xp% &fXP'
+    locked:
+      material: red_stained_glass_pane
+      name: '&c%skill% 等级 %level_numeral%'
+      lore:
+      - '&f'
+      - '&f奖励：'
+      - '%rewards%'
+  close:
+    material: barrier
+    name: '&c关闭'
+    location:
+      row: 6
+      column: 5
+  skill-icon:
+    name: '&#ff00ae%skill% &d%level_numeral%'
+    lore:
+    - '&8&o%description%'
+    - '&f'
+    - '%skill_specific%'
+    - '&f'
+    - '&f升级进度：'
+    - '&8» &e%percentage_progress%'
+    - '&8» &e%current_xp%&8/&7%required_xp% &fXP'
+    - '&f'
+    - '&e点击以查看等级进度！'
+skills:
+  level-xp-requirements:
+  - 50
+  - 125
+  - 200
+  - 300
+  - 500
+  - 750
+  - 1000
+  - 1500
+  - 2000
+  - 3500
+  - 5000
+  - 7500
+  - 10000
+  - 15000
+  - 20000
+  - 30000
+  - 50000
+  - 75000
+  - 100000
+  - 200000
+  - 300000
+  - 400000
+  - 500000
+  - 600000
+  - 700000
+  - 800000
+  - 900000
+  - 1000000
+  - 1100000
+  - 1200000
+  - 1300000
+  - 1400000
+  - 1500000
+  - 1600000
+  - 1700000
+  - 1800000
+  - 1900000
+  - 2000000
+  - 2100000
+  - 2200000
+  - 2300000
+  - 2400000
+  - 2500000
+  - 2600000
+  - 2750000
+  - 2900000
+  - 3100000
+  - 3400000
+  - 3700000
+  - 4000000
+  prevent-levelling-while-afk: true
+  progress:
+    action-bar:
+      enabled: true
+      format: '&f%skill% &8| &9(%current_xp%/%required_xp%) &e+%gained_xp%'
+    sound:
+      enabled: true
+      id: entity_experience_orb_pickup
+      pitch: 2
+      volume: 0.1
+  level-up:
+    message:
+      level-as-numeral: true
+      enabled: true
+      message:
+      - '&f'
+      - ' &#ff00ae你的&d%skill%&#ff00ae技能已升至&e等级 %level%&#ff00ae！'
+      - '&f'
+      - ' &#ff00ae&l奖励：'
+      - '%rewards%'
+      - '&f'
+    sound:
+      enabled: true
+      id: entity_player_levelup
+      pitch: 0.8
+stats:
+  defense:
+    percent-less-damage-per-level: 1
+    name: '&#e884b0🛡 防御'
+  strength:
+    percent-more-damage-per-level: 1
+    name: '&#db0000🗡 力量'
+  crit_chance:
+    chance-per-level: 1
+    name: '&#f7ff85☣ 暴击几率'
+  crit_damage:
+    percent-more-damage-per-level: 2
+    base-percent-more: 50
+    name: '&9☠ 暴击伤害'
+  speed:
+    percent-faster-per-level: 1
+    name: '&#40ffe6✦ 速度'
+  wisdom:
+    percent-more-xp-gain: 1
+    name: '&#42f566✎ 智慧'
+  ferocity:
+    chance-per-level: 0.5
+    name: '&#6b0000⫽ 凶猛'
+damage-indicators:
+  enabled: true
+  format:
+    normal: '&7%damage%'
+    crit: '&f✧ <gradient:#f953c6>%damage%</gradient:#b91d73> &f✧'
+  max-x-offset: 0.6
+  max-y-offset: 0.6
+  max-z-offset: 0.6
+commands:
+  top:
+    use-display-name: true
+autosave:
+  log: true
+  async: false

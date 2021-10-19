@@ -1,0 +1,76 @@
+name: "附魔"
+description: "通过附魔物品来获取附魔经验值"
+max-level: 50
+
+gui:
+  item: enchanting_table
+  position:
+    row: 3
+    column: 5
+  lore:
+    - "&f受益数值："
+    - "&8» &r%ecoskills_wisdom_name%"
+    - "&8» &r%ecoskills_crit_chance_name%"
+    - "&f"
+    - "&f效果："
+    - "&8» &r&6再来一次 %ecoskills_second_chance_numeral%"
+    - "   %ecoskills_second_chance_description%"
+    - "&8» &r&6经验退还 %ecoskills_reimbursement_numeral%"
+    - "   %ecoskills_reimbursement_description%"
+    - "&8» &r&6过度补偿 %ecoskills_overcompensation_numeral%"
+    - "   %ecoskills_overcompensation_description%"
+
+rewards:
+  # The actual rewards to be given
+  rewards:
+    - "wisdom::2"
+    - "crit_chance::1"
+    - "second_chance::1"
+    - "reimbursement::1"
+    - "overcompensation::1:10:100"
+
+  level-commands: []
+
+  # The chat messages to send on level up
+  chat-messages:
+    1:
+      - " &8» &r&f+2 %ecoskills_wisdom_name%"
+      - " &8» &r&f+1 %ecoskills_crit_chance_name%"
+      - " &8» &r&6再来一次 %ecoskills_second_chance_numeral%"
+      - "    %ecoskills_second_chance_description%"
+      - " &8» &r&6经验退还 %ecoskills_reimbursement_numeral%"
+      - "    %ecoskills_reimbursement_description%"
+    10:
+      - " &8» &r&f+2 %ecoskills_wisdom_name%"
+      - " &8» &r&f+1 %ecoskills_crit_chance_name%"
+      - " &8» &r&6再来一次 %ecoskills_second_chance_numeral%"
+      - "    %ecoskills_second_chance_description%"
+      - " &8» &r&6经验退还 %ecoskills_reimbursement_numeral%"
+      - "    %ecoskills_reimbursement_description%"
+      - " &8» &r&6过度补偿 %ecoskills_over_compensation_numeral%"
+      - "    %ecoskills_overcompensation_description%"
+
+  # The lore to show in the levels gui
+  progression-lore:
+    1:
+      - " &8» &r&f+2 %ecoskills_wisdom_name%"
+      - " &8» &r&f+1 %ecoskills_crit_chance_name%"
+      - " &8» &r&6再来一次 %ecoskills_second_chance_numeral%"
+      - "    %ecoskills_second_chance_description%"
+      - " &8» &r&6经验退还 %ecoskills_reimbursement_numeral%"
+      - "    %ecoskills_reimbursement_description%"
+    10:
+      - " &8» &r&f+2 %ecoskills_wisdom_name%"
+      - " &8» &r&f+1 %ecoskills_crit_chance_name%"
+      - " &8» &r&6再来一次 %ecoskills_second_chance_numeral%"
+      - "    %ecoskills_second_chance_description%"
+      - " &8» &r&6经验退还 %ecoskills_reimbursement_numeral%"
+      - "    %ecoskills_reimbursement_description%"
+      - " &8» &r&6过度补偿 %ecoskills_over_compensation_numeral%"
+      - "    %ecoskills_overcompensation_description%"
+
+# The experience to give for each level cost of enchanting
+xp-per-level: 4
+
+ecoenchants: #Config for EcoEnchants integration
+  xp-for-special: 2500

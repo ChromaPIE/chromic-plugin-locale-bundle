@@ -1,0 +1,37 @@
+messages:
+  prefix: '&#ff00ae&lEcoSkills&r &8» &r'
+  no-permission: '&c你没有权限这样做！'
+  not-player: '&c该命令必须由玩家执行'
+  invalid-command: '&c未知子命令！'
+  reloaded: 已重新载入！
+  requires-player: '&c你必须指定一位玩家！'
+  invalid-player: '&c玩家无效！'
+  reset-player: '&f已重置玩家！'
+  requires-skill: '&c你必须指定一个技能！'
+  invalid-skill: '&c技能无效！'
+  requires-amount: '&c你必须指定一个数值！'
+  invalid-amount: '&c数值无效！'
+  gave-skill-xp: 已给予玩家 %player% %amount% 点%skill%经验值！
+  gave-stat: 已给予玩家 %player% %amount% 点%stat%&r数值！
+line-wrap-color: '&8'
+top-line-format: '%rank%. %playername% - %level%'
+top:
+- '---- 技能排行榜 ----'
+- '%lines%'
+menu:
+  title: 你的技能
+stats:
+  defense:
+    name: '&#e884b0🛡 防御'
+  strength:
+    name: '&#db0000🗡 力量'
+  crit_chance:
+    name: '&#f7ff85☣ 暴击几率'
+  crit_damage:
+    name: '&9☠ 暴击伤害'
+  speed:
+    name: '&#40ffe6✦ 速度'
+  wisdom:
+    name: '&#42f566✎ 智慧'
+  ferocity:
+    name: '&#6b0000⫽ 凶猛'

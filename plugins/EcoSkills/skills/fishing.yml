@@ -1,0 +1,45 @@
+name: "垂钓"
+description: "通过钓鱼来获取垂钓经验值"
+max-level: 50
+
+gui:
+  item: fishing_rod
+  position:
+    row: 4
+    column: 3
+  lore:
+    - "&f受益数值："
+    - "&8» &r%ecoskills_defense_name%"
+    - "&8» &r%ecoskills_wisdom_name%"
+    - "&f"
+    - "&f效果："
+    - "&8» &r&6深海之眼 %ecoskills_eye_of_the_depths_numeral%"
+    - "   %ecoskills_eye_of_the_depths_description%"
+
+rewards:
+  # The actual rewards to be given
+  rewards:
+    - "defense::2"
+    - "wisdom::1"
+    - "eye_of_the_depths::1"
+
+  level-commands: []
+
+  # The chat messages to send on level up
+  chat-messages:
+    1:
+      - " &8» &r&f+2 %ecoskills_defense_name%"
+      - " &8» &r&f+1 %ecoskills_wisdom_name%"
+      - " &8» &r&6深海之眼 %ecoskills_eye_of_the_depths_numeral%"
+      - "    %ecoskills_eye_of_the_depths_description%"
+
+  # The lore to show in the levels gui
+  progression-lore:
+    1:
+      - " &8» &r&f+2 %ecoskills_defense_name%"
+      - " &8» &r&f+1 %ecoskills_wisdom_name%"
+      - " &8» &r&6深海之眼 %ecoskills_eye_of_the_depths_numeral%"
+      - "    %ecoskills_eye_of_the_depths_description%"
+
+# The experience to give for each in-game experience dropped
+xp-per-experience-dropped: 3.5

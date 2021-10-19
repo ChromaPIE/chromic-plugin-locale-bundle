@@ -1,0 +1,82 @@
+name: "探索"
+description: "通过移动来获取探索经验值"
+max-level: 50
+
+gui:
+  item: leather_boots
+  position:
+    row: 4
+    column: 7
+  lore:
+    - "&f受益数值："
+    - "&8» &r%ecoskills_speed_name%"
+    - "&8» &r%ecoskills_crit_chance_name%"
+    - "&f"
+    - "&f效果："
+    - "&8» &r&6无缝移动 %ecoskills_seamless_movement_numeral%"
+    - "   %ecoskills_seamless_movement_description%"
+    - "&8» &r&6灵巧闪避 %ecoskills_dodging_numeral%"
+    - "   %ecoskills_dodging_description%"
+    - "&8» &r&6火速脱逃 %ecoskills_accelerated_escape_numeral%"
+    - "   %ecoskills_accelerated_escape_description%"
+
+rewards:
+  # The actual rewards to be given
+  rewards:
+    - "speed::2"
+    - "crit_chance::1"
+    - "seamless_movement::1"
+    - "dodging::1"
+    - "accelerated_escape::1:10:100"
+
+  level-commands: []
+
+  # The chat messages to send on level up
+  chat-messages:
+    1:
+      - " &8» &r&f+2 %ecoskills_speed_name%"
+      - " &8» &r&f+1 %ecoskills_crit_chance_name%"
+      - " &8» &r&6无缝移动 %ecoskills_seamless_movement_numeral%"
+      - "    %ecoskills_seamless_movement_description%"
+      - " &8» &r&6灵巧闪避 %ecoskills_dodging_numeral%"
+      - "    %ecoskills_dodging_description%"
+    10:
+      - " &8» &r&f+2 %ecoskills_speed_name%"
+      - " &8» &r&f+1 %ecoskills_crit_chance_name%"
+      - " &8» &r&6无缝移动 %ecoskills_seamless_movement_numeral%"
+      - "    %ecoskills_seamless_movement_description%"
+      - " &8» &r&6灵巧闪避 %ecoskills_dodging_numeral%"
+      - "    %ecoskills_dodging_description%"
+      - " &8» &r&6火速脱逃 %ecoskills_accelerated_escape_numeral%"
+      - "    %ecoskills_accelerated_escape_description%"
+
+  # The lore to show in the levels gui
+  progression-lore:
+    1:
+      - " &8» &r&f+2 %ecoskills_speed_name%"
+      - " &8» &r&f+1 %ecoskills_crit_chance_name%"
+      - " &8» &r&6无缝移动 %ecoskills_seamless_movement_numeral%"
+      - "    %ecoskills_seamless_movement_description%"
+      - " &8» &r&6灵巧闪避 %ecoskills_dodging_numeral%"
+      - "    %ecoskills_dodging_description%"
+    10:
+      - " &8» &r&f+2 %ecoskills_speed_name%"
+      - " &8» &r&f+1 %ecoskills_crit_chance_name%"
+      - " &8» &r&6无缝移动 %ecoskills_seamless_movement_numeral%"
+      - "    %ecoskills_seamless_movement_description%"
+      - " &8» &r&6灵巧闪避 %ecoskills_dodging_numeral%"
+      - "    %ecoskills_dodging_description%"
+      - " &8» &r&6火速脱逃 %ecoskills_accelerated_escape_numeral%"
+      - "    %ecoskills_accelerated_escape_description%"
+
+
+# Chance to give 1 xp every time the player moves
+xp-on-move-chance: 0.05
+# The amount of xp to give before any modifiers are applied
+base-xp-to-give: 20
+# If the amount of xp given should be higher when travelling faster
+multiply-xp-by-speed: true
+# The amount of experience to give for each point of fall damage taken
+fall-damage-xp-per-hp: 16
+# If experience should be given when the player dies of fall damage
+give-xp-on-fatal-fall: false

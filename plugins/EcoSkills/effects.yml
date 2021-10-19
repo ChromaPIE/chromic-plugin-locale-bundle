@@ -1,0 +1,219 @@
+bountiful_harvest:
+  description: "&8有 &a%chance%%&8 的几率获得 &a%multiplier%&8 倍的作物出产"
+
+  # Chance is as a percentage; if the chance for a player is over 100 then it will always be double drops
+  # with a chance to get triple drops. Same goes if above 200, but then it will always be triple with a chance
+  # for quadruple.
+  chance-per-level: 8
+versatile_tools:
+  description: "&8使用镐造成的伤害提升 &a%percent_more%%"
+
+  # The percent (%) more damage to deal with a pickaxe for each level of the effect.
+  percent-more-per-level: 8
+eye_of_the_depths:
+  description: "&8有 &a%chance%%&8 的几率从垂钓中获得稀有掉落物"
+
+  # Chance is as a percentage.
+  chance-per-level: 0.1
+  # The rare loot items are listed below.
+  # You can import drops from the following plugins:
+  # EcoArmor, EcoItems, Talismans, StatTrackers, EcoWeapons, Reforges, Oraxen
+  # You can also use vanilla items with their material
+  # You can set enchantments on items with the following syntax:
+  # <item> <enchantment:level> <enchantment:level> etc
+  # For example, a reaper scythe with Razor 4 and Criticals 3 would be:
+  # ecoweapons:reaper_scythe razor:4 criticals:3
+  rare-loot-items:
+    - enchanted_book confusion:1
+    - enchanted_book confusion:2
+    - netherite_ingot
+    - ecoarmor:set_miner_helmet
+    - ecoarmor:set_miner_chestplate
+    - ecoarmor:set_miner_leggings
+    - ecoarmor:set_miner_boots
+    - reforges:dynamic
+serrated_strikes:
+  description: "&8有 &a%chance%%&8 的几率使攻击目标流血"
+
+  # Chance is as a percentage.
+  chance-per-level: 2
+  # The damage to deal for each 'bleed tick'
+  bleed-tick-damage: 2
+  # The amount of ticks to wait between each bleed tick
+  bleed-tick-spacing: 15
+  # The amount of bleed ticks to give
+  bleed-ticks: 4
+seamless_movement:
+  description: "&8有 &a%chance%%&8 的几率无视摔落伤害"
+
+  # The chance to ignore fall damage, as a percentage
+  chance-per-level: 2
+potionmaster:
+  description: "&8所酿造的药水持续时间延长 &a%percent_more%%&8"
+
+  # The percent more time for potions to last for each level of the effect
+  percent-more-per-level: 4
+
+  # The lore to add to indicate a duration buff
+  lore:
+    - ""
+    - "&fPotionmaster Buff:"
+    - "&8» &f+&e%seconds%&f Seconds"
+shamanism:
+  description: "&8生命值恢复速度提升 &a%percent_faster%%&8"
+
+  # The percent faster regen for each level of the effect
+  percent-faster-per-level: 4
+craftsmanship:
+  description: "&8斧的耐久度折损减少 &a%percent_less%%"
+
+  # 100% is unbreakable
+  percent-less-per-level: 2
+second_chance:
+  description: "&8物品有 &a%chance%%&8 的几率在耐久度降至 &a30&8 以下时立即得以修复"
+
+  # Items will try to heal every time durability damage is taken below this level
+  below-durability-check: 30
+  # Chance per level as a percentage
+  # This will follow a binomial distribution where the amount of trials is the durability check (30 by default, see above)
+  # Since this chance will be called many times, it would be best to have this be low.
+  chance-per-level: 0.1
+efficient_brewing:
+  description: "&8药水的酿造耗时缩短 &a%seconds_less%&8 秒"
+
+  # The ticks faster brewing time for each level (default is 400)
+  ticks-less-per-level: 6
+mystic_resilience:
+  description: "&8有 &a%chance%%&8 的几率无视负面状态效果"
+
+  # Chance per level as a percentage
+  chance-per-level: 0.1
+satiation:
+  description: "&8饥饿值消耗减少 &a%percent_less%%&8"
+
+  # 100% is no hunger
+  percent-less-hunger-per-level: 2
+golden_yield:
+  description: "&8有 &a%chance%%&8 的几率使掉落物翻 &a5&8 倍"
+
+  # Chance as a percentage
+  chance-per-level: 0.3
+
+  # The amount more drops to give
+  drop-multiplier: 5
+dodging:
+  description: "&8有 &a%chance%%&8 的几率无视来袭的伤害"
+
+  # The chance to ignore damage, as a percentage
+  chance-per-level: 0.5
+accelerated_escape:
+  description: "&8承受伤害后在 &a1.5&8 秒内获得 &a%percent_faster%%&8 的移动速度增益"
+
+  # The percent faster speed, as a percentage
+  percent-faster-per-level: 4
+
+  # The duration to go faster for, in ticks
+  ticks: 30
+infernal_resistance:
+  description: "&8有 &a%chance%%&8 的几率无视火焰伤害"
+
+  # The chance to ignore damage, as a percentage
+  chance-per-level: 2
+bravery:
+  description: "&8削减 &a%percent_less%%&8 由 BOSS 造成的伤害"
+
+  # The percent less damage to take
+  percent-less-per-level: 1.5
+dazzle:
+  description: "&8有 &a%chance%%&8 的几率对攻击目标施加 &a%seconds%&8 秒的反胃效果"
+
+  # The base ticks to give nausea for
+  base-ticks: 18
+  # The extra ticks to give nausea for per level
+  ticks-per-level: 2
+  # The chance to give nausea per level, as a percentage
+  chance-per-level: 1.5
+strong_impact:
+  description: "&8有 &a%chance%%&8 的几率造成 &a3&8 倍伤害"
+
+  # The damage multiplier
+  multiplier: 3
+  # The chance to deal 3x damage, per level
+  chance-per-level: 0.2
+endangering:
+  description: "&8有 &a%chance%%&8 的几率抹除攻击目标的受伤冷却限制"
+
+  # The chance as a percentage
+  chance-per-level: 3
+spelunking:
+  description: "&8有 &a%chance%%&8 的几率获得 &a%multiplier%&8 倍的矿石掉落物"
+
+  # The ores that can drop double
+  on-blocks:
+    - "nether_quartz_ore"
+    - "coal_ore"
+    - "deepslate_coal_ore"
+    - "iron_ore"
+    - "deepslate_iron_ore"
+    - "gold_ore"
+    - "deepslate_gold_ore"
+    - "gilded_blackstone"
+    - "lapis_lazuli_ore"
+    - "deepslate_lapis_lazuli_ore"
+    - "redstone_ore"
+    - "deepslate_redstone_ore"
+    - "emerald_ore"
+    - "deepslate_emerald_ore"
+    - "diamond_ore"
+    - "deepslate_diamond_ore"
+    - "ancient_debris"
+
+  # Chance is as a percentage; if the chance for a player is over 100 then it will always be double drops
+  # with a chance to get triple drops. Same goes if above 200, but then it will always be triple with a chance
+  # for quadruple.
+  chance-per-level: 8
+dynamic_mining:
+  description: "&8有 &a%chance%%&8 的几率在采掘方块后获得 &a%seconds%&8 秒的急迫 III 效果"
+
+  # The base ticks to give nausea for
+  base-ticks: 18
+  # The extra ticks to give nausea for per level
+  ticks-per-level: 2
+  # The chance to give nausea per level, as a percentage
+  chance-per-level: 1.5
+  # The level of haste to give
+  level: 3
+reimbursement:
+  description: "&8有 &a%chance%%&8 的几率在进行附魔后返还经验值"
+
+  # The chance to get experience back, as a percentage
+  chance-per-level: 0.5
+overcompensation:
+  description: "&8有 &a%chance%%&8 的几率在进行附魔后返还青金石"
+
+  # The chance to get experience back, as a percentage
+  chance-per-level: 0.75
+master_lumberjack:
+  description: "&8有 &a%chance%%&8 的几率获得 &a%multiplier%&8 倍的树木掉落物"
+
+  # The blocks that can drop double
+  on-blocks:
+    - "oak_log"
+    - "birch_log"
+    - "spruce_log"
+    - "jungle_log"
+    - "acacia_log"
+    - "dark_oak_log"
+    - "oak_wood"
+    - "birch_wood"
+    - "spruce_wood"
+    - "jungle_wood"
+    - "acacia_wood"
+    - "dark_oak_wood"
+    - "crimson_stem"
+    - "warped_stem"
+
+  # Chance is as a percentage; if the chance for a player is over 100 then it will always be double drops
+  # with a chance to get triple drops. Same goes if above 200, but then it will always be triple with a chance
+  # for quadruple.
+  chance-per-level: 6

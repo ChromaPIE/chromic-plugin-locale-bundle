@@ -1,0 +1,91 @@
+name: "炼金"
+description: "通过酿造药水来获取炼金经验值"
+max-level: 50
+
+gui:
+  item: brewing_stand
+  position:
+    row: 4
+    column: 4
+  lore:
+    - "&f受益数值："
+    - "&8» &r%ecoskills_crit_chance_name%"
+    - "&8» &r%ecoskills_wisdom_name%"
+    - "&f"
+    - "&f效果："
+    - "&8» &r&6药剂大师 %ecoskills_potionmaster_numeral%"
+    - "   %ecoskills_potionmaster_description%"
+    - "&8» &r&6高效酿造 %ecoskills_efficient_brewing_numeral%"
+    - "   %ecoskills_efficient_brewing_description%"
+    - "&8» &r&6秘法焕新 %ecoskills_mystic_resilience_numeral%"
+    - "   %ecoskills_mystic_resilience_description%"
+
+rewards:
+  # The actual rewards to be given
+  rewards:
+    - "crit_chance::2"
+    - "wisdom::1"
+    - "potionmaster::1"
+    - "efficient_brewing::1:10:100"
+    - "mystic_resilience::1"
+
+  level-commands: []
+
+  # The chat messages to send on level up
+  chat-messages:
+    1:
+      - " &8» &r&f+2 %ecoskills_crit_chance_name%"
+      - " &8» &r&f+1 %ecoskills_wisdom_name%"
+      - " &8» &r&6药剂大师 %ecoskills_potionmaster_numeral%"
+      - "    %ecoskills_potionmaster_description%"
+      - " &8» &r&6秘法焕新 %ecoskills_mystic_resilience_numeral%"
+      - "    %ecoskills_mystic_resilience_description%"
+    10:
+      - " &8» &r&f+2 %ecoskills_crit_chance_name%"
+      - " &8» &r&f+1 %ecoskills_wisdom_name%"
+      - " &8» &r&6药剂大师 %ecoskills_potionmaster_numeral%"
+      - "    %ecoskills_potionmaster_description%"
+      - " &8» &r&6高效酿造 %ecoskills_efficient_brewing_numeral%"
+      - "    %ecoskills_efficient_brewing_description%"
+      - " &8» &r&6秘法焕新 %ecoskills_mystic_resilience_numeral%"
+      - "    %ecoskills_mystic_resilience_description%"
+
+  # The lore to show in the levels gui
+  progression-lore:
+    1:
+      - " &8» &r&f+2 %ecoskills_crit_chance_name%"
+      - " &8» &r&f+1 %ecoskills_wisdom_name%"
+      - " &8» &r&6药剂大师 %ecoskills_potionmaster_numeral%"
+      - "    %ecoskills_potionmaster_description%"
+      - " &8» &r&6秘法焕新 %ecoskills_mystic_resilience_numeral%"
+      - "    %ecoskills_mystic_resilience_description%"
+    10:
+      - " &8» &r&f+2 %ecoskills_crit_chance_name%"
+      - " &8» &r&f+1 %ecoskills_wisdom_name%"
+      - " &8» &r&6药剂大师 %ecoskills_potionmaster_numeral%"
+      - "    %ecoskills_potionmaster_description%"
+      - " &8» &r&6高效酿造 %ecoskills_efficient_brewing_numeral%"
+      - "    %ecoskills_efficient_brewing_description%"
+      - " &8» &r&6秘法焕新 %ecoskills_mystic_resilience_numeral%"
+      - "    %ecoskills_mystic_resilience_description%"
+
+
+# The experience to give for each brewing ingredient
+xp-rewards:
+  - "nether_wart:6"
+  - "redstone:6"
+  - "glowstone_dust:6"
+  - "fermented_spider_eye:6"
+  - "gunpowder:6"
+  - "dragon_breath:42"
+  - "sugar:14"
+  - "rabbit_foot:22"
+  - "glistering_melon_slice:22"
+  - "spider_eye:8"
+  - "pufferfish:14"
+  - "magma_cream:12"
+  - "golden_carrot:22"
+  - "blaze_powder:12"
+  - "ghast_tear:12"
+  - "turtle_helmet:80"
+  - "phantom_membrane:34"

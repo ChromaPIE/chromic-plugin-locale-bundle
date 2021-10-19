@@ -1,0 +1,84 @@
+name: "耕种"
+description: "通过收获作物来获取耕种经验值"
+max-level: 50
+
+gui:
+  item: golden_hoe
+  position:
+    row: 3
+    column: 6
+  lore:
+    - "&f受益数值："
+    - "&8» &r%ecoskills_crit_damage_name%"
+    - "&8» &r%ecoskills_wisdom_name%"
+    - "&f"
+    - "&f效果："
+    - "&8» &r&6丰收盛象 %ecoskills_bountiful_harvest_numeral%"
+    - "   %ecoskills_bountiful_harvest_description%"
+    - "&8» &r&6吃饱喝足 %ecoskills_satiation_numeral%"
+    - "   %ecoskills_satiation_description%"
+    - "&8» &r&6金牌高产 %ecoskills_golden_yield_numeral%"
+    - "   %ecoskills_golden_yield_description%"
+
+rewards:
+  # The actual rewards to be given
+  rewards:
+    - "crit_damage::2"
+    - "wisdom::1"
+    - "bountiful_harvest::1"
+    - "satiation::1"
+    - "golden_yield::1:10:100"
+
+  level-commands: []
+
+  # The chat messages to send on level up
+  chat-messages:
+    1:
+      - " &8» &r&f+2 %ecoskills_crit_damage_name%"
+      - " &8» &r&f+1 %ecoskills_wisdom_name%"
+      - " &8» &r&6丰收盛象 %ecoskills_bountiful_harvest_numeral%"
+      - "    %ecoskills_bountiful_harvest_description%"
+      - " &8» &r&6吃饱喝足 %ecoskills_satiation_numeral%"
+      - "    %ecoskills_satiation_description%"
+    10:
+      - " &8» &r&f+2 %ecoskills_crit_damage_name%"
+      - " &8» &r&f+1 %ecoskills_wisdom_name%"
+      - " &8» &r&6丰收盛象 %ecoskills_bountiful_harvest_numeral%"
+      - "    %ecoskills_bountiful_harvest_description%"
+      - " &8» &r&6吃饱喝足 %ecoskills_satiation_numeral%"
+      - "    %ecoskills_satiation_description%"
+      - " &8» &r&6金牌高产 %ecoskills_golden_yield_numeral%"
+      - "    %ecoskills_golden_yield_description%"
+
+  # The lore to show in the levels gui
+  progression-lore:
+    1:
+      - " &8» &r&f+2 %ecoskills_crit_damage_name%"
+      - " &8» &r&f+1 %ecoskills_wisdom_name%"
+      - " &8» &r&6丰收盛象 %ecoskills_bountiful_harvest_numeral%"
+      - "    %ecoskills_bountiful_harvest_description%"
+      - " &8» &r&6吃饱喝足 %ecoskills_satiation_numeral%"
+      - "    %ecoskills_satiation_description%"
+    10:
+      - " &8» &r&f+2 %ecoskills_crit_damage_name%"
+      - " &8» &r&f+1 %ecoskills_wisdom_name%"
+      - " &8» &r&6丰收盛象 %ecoskills_bountiful_harvest_numeral%"
+      - "    %ecoskills_bountiful_harvest_description%"
+      - " &8» &r&6吃饱喝足 %ecoskills_satiation_numeral%"
+      - "    %ecoskills_satiation_description%"
+      - " &8» &r&6金牌高产 %ecoskills_golden_yield_numeral%"
+      - "    %ecoskills_golden_yield_description%"
+
+# The xp rewards for each crop type
+# Specify with type:xp
+xp-rewards:
+  - "wheat:4"
+  - "potato:4"
+  - "carrots:4"
+  - "melon:4"
+  - "pumpkin:4.5"
+  - "cactus:2"
+  - "sugar_cane:2"
+  - "brown_mushroom:6"
+  - "red_mushroom:6"
+  - "cocoa_beans:3"
