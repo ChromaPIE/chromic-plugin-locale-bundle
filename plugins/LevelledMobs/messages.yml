@@ -1,0 +1,262 @@
+#                    _                   _ _          _ __  __       _
+#                   | |    _____   _____| | | ___  __| |  \/  | ___ | |__  ___
+#                   | |   / _ \ \ / / _ \ | |/ _ \/ _` | |\/| |/ _ \| '_ \/ __|
+#                   | |__|  __/\ V /  __/ | |  __/ (_| | |  | | (_) | |_) \__ \
+#                   |_____\___| \_/ \___|_|_|\___|\__,_|_|  |_|\___/|_.__/|___/
+#                             The Ultimate RPG Levelled Mobs Solution
+#
+# --------------------------------------------------------------------------------------------LM3
+# +                                      ++                                                  +LM3
+# +  Main Developers                     ++  Need support documentation?                     +LM3
+# +    lokka30                           ++    https://github.com/lokka30/LevelledMobs/wiki  +LM3
+# +      Author and developer            ++                                                  +LM3
+# +      https://ko-fi.com/lokka30       ++  ArcanePlugins Support Discord                   +LM3
+# +                                      ++    https://discord.gg/RQ8M4A5                    +LM3
+# +                                      ++                                                  +LM3
+# +    stumper66                         ++  Special thanks:                                 +LM3
+# +      Developer since v2              ++    ArcanePlugins developers and testers!         +LM3
+# +      https://ko-fi.com/penalbuffalo  ++    Donators, patrons, and other supporters!      +LM3
+# +                                      ++    SpigotMC, PaperMC, ProtocolLib, NBT-API,      +LM3
+# +                                      ++    PlaceholderAPI, and bStats!                   +LM3
+# +    UltimaOath                        ++                                                  +LM3
+# +      Docs and configs since v2       ++  Other Contributors:                             +LM3
+# +                                      ++    Eyrian, iCodinqs, deiphiz, CoolBoy, Esophose, +LM3
+# +                                      ++    7smile7, Hugo5551, konsolas, Shevchik,        +LM3
+# +                                      ++    limzikiki, and Zombie_Striker                 +LM3
+# +                                      ++                                                  +LM3
+# --------------------------------------------------------------------------------------------LM3
+#                               _____
+#                              |     |___ ___ ___ ___ ___ ___ ___
+#                              | | | | -_|_ -|_ -| .'| . | -_|_ -|
+#                              |_|_|_|___|___|___|__,|_  |___|___|
+#                                                    |___|
+#
+# +-------------------------------------------------------------------------------------------LM3
+# +                                                                                          +LM3
+# +   Section 01 - Common Messages                                                           +LM3
+# +                                                                                          +LM3
+# +-------------------------------------------------------------------------------------------LM3
+common:
+  prefix: '&b&lLevelledMobs:&7'
+  no-permission:
+    - '%prefix% 你没有权限这样做。'
+  players-only:
+    - '%prefix% 仅玩家可使用。'
+  player-offline:
+    - '%prefix% &r玩家 %player%&7 无效或处于离线状态。'
+
+
+# +-------------------------------------------------------------------------------------------LM3
+# +                                                                                          +LM3
+# +   Section 02 - Default Command Messages                                                  +LM3
+# +                                                                                          +LM3
+# +-------------------------------------------------------------------------------------------LM3
+command:
+  levelledmobs:
+    main-usage:
+      - '%prefix% 可用命令：'
+      - '&8 &m->&b /%label% summon &8- &7召唤指定的匹敌生物'
+      - '&8 &m->&b /%label% rules &8- &7显示规则系统'
+      - '&8 &m->&b /%label% kill &8- &7批量杀死匹敌生物'
+      - '&8 &m->&b /%label% reload &8- &7重新载入配置文件'
+      - '&8 &m->&b /%label% info &8- &7查看插件信息'
+      - '&8 &m->&b /%label% compatibility &8- &7检测插件与服务器的兼容性'
+
+
+# +-------------------------------------------------------------------------------------------LM3
+# +                                                                                          +LM3
+# +   Section 03 - Summon Command Messages                                                   +LM3
+# +                                                                                          +LM3
+# +-------------------------------------------------------------------------------------------LM3
+    summon:
+      invalid-amount:
+        - '%prefix% 数量“&b%amount%&7”无效。'
+      invalid-entity-type:
+        - '%prefix% 实体类型“&b%entityType%&7”无效。'
+      invalid-level:
+        - '%prefix% 等级“&b%level%&7”无效。'
+      invalid-summon-type:
+        - '%prefix% 召唤类型“&b%summonType%&7”无效。'
+      invalid-summon-type-console:
+        - '%prefix% 仅玩家可使用召唤类型“&bhere&7”，你必须使用“&batLocation&7”。'
+      invalid-location:
+        - '%prefix% 位置无效。'
+      here:
+        usage:
+          - '%prefix% 用法：&b/%label% summon <数量> <实体> <等级> here'
+        success:
+          - '%prefix% 已在你的位置生成 &b%amount%&7 个 &fLvl.%level% &b%entity%&7。'
+      atLocation:
+        usage:
+          - '%prefix% 用法：&b/%label% summon <数量> <实体> <等级> atLocation <x> <y> <z> [世界]'
+        success:
+          - '%prefix% 已在世界&7“&b%world%&7”的 &b%x%&7, &b%y%&7, &b%z%&7 处生成 &b%amount%&7 个 &fLvl.%level% &b%entity%&7。'
+        usage-console:
+          - '%prefix% 用法（控制台）：&b/%label% summon <数量> <实体> <等级> atLocation <x> <y> <z> <world>'
+        invalid-world:
+          - '%prefix% 世界“&b%world%&7”无效。'
+        invalid-location:
+          - '%prefix% 位置无效。'
+      atPlayer:
+        usage:
+          - '%prefix% 用法：&b/%label% summon <数量> <实体类型> <等级> atPlayer <玩家>'
+        success:
+          - '%prefix% 已在 &r%targetDisplayname%&7 的位置生成 &b%amount%&7 个 &fLvl.%level% &b%entity%&7。'
+      usage:
+        - '%prefix% 召唤命令句法：'
+        - '&8 &m->&b /%label% summon <数量> <实体> <等级> here'
+        - '&8 &m->&b /%label% summon <数量> <实体> <等级> atPlayer <玩家>'
+        - '&8 &m->&b /%label% summon <数量> <实体> <等级> atLocation <x> <y> <z> [世界]'
+      amount-limited:
+        min:
+          - '%prefix% 召唤生物的数量不可小于 &b1&7。'
+        max:
+          - '%prefix% 召唤生物的数量不可大于 &b%maxAmount%&7。'
+      level-limited:
+        min:
+          - '%prefix% 等级不得小于 &bLvl.%minLevel%&7。'
+        max:
+          - '%prefix% 等级不得大于 &bLvl.%maxLevel%&7。'
+      not-levellable:
+        - '%prefix% &b%entity%&7 无法成为匹敌生物。'
+
+
+# +-------------------------------------------------------------------------------------------LM3
+# +                                                                                          +LM3
+# +   Section 04 - Kill Command Messages                                                     +LM3
+# +                                                                                          +LM3
+# +-------------------------------------------------------------------------------------------LM3
+    kill:
+      usage:
+        - '%prefix% 用法：&b/%label% kill <all/near>'
+      all:
+        invalid-world:
+          - '%prefix% 世界“&b%world%&7”无效。'
+        success:
+          - '%prefix% 已杀死 &b%worlds%&7 个世界中的 &b%killed%&7 个匹敌生物&8（已跳过 &b%skipped%&7 个生物&8）&7。'
+        usage:
+          - '%prefix% 用法：&b/%label% kill all [world/*]'
+        usage-console:
+          - '%prefix% 用法（控制台）：/%label% kill all <world/*>'
+      near:
+        invalid-radius:
+          - '%prefix% 半径“&b%radius%&7”无效。'
+        invalid-radius-min:
+          - '%prefix% 指定半径不得小于 &8（&b%minRadius%&8）&7。'
+        invalid-radius-max:
+          - '%prefix% 指定半径不得大于 &8（&b%maxRadius%&8）&7。'
+        success:
+          - '%prefix% 已杀死半径 &b%radius%&7 格内的 &b%killed%&7 个匹敌生物&8（已跳过 &b%skipped%&7 个生物&8）&7。'
+        usage:
+          - '%prefix% 用法：&b/%label% kill near <radius>'
+
+
+# +-------------------------------------------------------------------------------------------LM3
+# +                                                                                          +LM3
+# +   Section 05 - Spawner Command Messages                                                  +LM3
+# +                                                                                          +LM3
+# +-------------------------------------------------------------------------------------------LM3
+    spawner:
+      usage:
+        - '%prefix% 刷怪笼命令句法：'
+        - '&8 &m->&b /%label% spawner create'
+        - '&8 &m->&b /%label% spawner copy'
+        - '&8 &m->&b /%label% spawner info'
+        - '&7&o 示例刷怪笼'
+        - '&7/%label% spawner create &b/minlevel&7 1 &b/maxlevel&7 10 &b/name&7 "我的自定义 LM 刷怪笼" &b/customDropsId&7 Id1'
+      no-value:
+        - '%prefix% 未指定 &b%keyname%&7 的数值'
+      invalid-value:
+        - '%prefix% &b%keyname%&7 的数值无效，必须为一个数字'
+      no-level-specified:
+        - '%prefix% 你必须指定 minLevel 和/或 maxLevel'
+      inventory-full:
+        - '%prefix% &4你的物品栏已满！'
+      spawner-give-message:
+        - '%prefix% 已给予 LM 刷怪笼'
+      spawner-give-message-console:
+        - '%prefix% 已给予 &r%playername%&7 一个 LM 刷怪笼，minLevel 为 &b%minlevel%&7，maxLevel 为 &b%maxlevel%&7'
+      info:
+        status-enabled:
+          - '%prefix% 刷怪笼信息模式已被&c启用&f。'
+        status-not-enabled:
+          - '%prefix% 刷怪笼信息模式尚未&c启用&f。'
+        enabled:
+          - '%prefix% 已&a启用&f刷怪笼信息模式。右击任意刷怪笼来查看详情！'
+        disabled:
+          - '%prefix% 已&a禁用&f刷怪笼信息模式。'
+      copy:
+        vanilla-spawner:
+          - '%prefix% 刷怪笼复制功能仅可作用于 LM 刷怪笼'
+        status-enabled:
+          - '%prefix% 刷怪笼复制功能已被&c启用&f。'
+        status-not-enabled:
+          - '%prefix% 刷怪笼复制功能尚未&c启用&f。'
+        enabled:
+          - '%prefix% 已&a启用&f刷怪笼复制功能。右击任意 LM 刷怪笼来创建副本。'
+          - '你必须处于空手状态。'
+        disabled:
+          - '%prefix% 已&a禁用&f刷怪笼复制功能。。'
+
+
+# +-------------------------------------------------------------------------------------------LM3
+# +                                                                                          +LM3
+# +   Section 06 - System Command Messages                                                   +LM3
+# +                                                                                          +LM3
+# +-------------------------------------------------------------------------------------------LM3
+    reload:
+      started:
+        - '%prefix% 正在重新加载配置文件……'
+      finished:
+        - '%prefix% 已重新加载。'
+      usage:
+        - '%prefix% 用法：&b/%label% reload'
+    info:
+      about:
+        - ' '
+        - '&b&lLevelledMobs &fv%version%&7 作者：lokka30、stumper66、Oathkeeper'
+        - '&7&o%description%'
+        - ' '
+        - '&7本插件支持的 Minecraft 版本：&f%supportedVersions%'
+        - '&7代码贡献者：&f%contributors%'
+        - ' '
+      listSeparator: '&7, &f'
+      usage:
+        - '%prefix% 用法：&b/%label% info'
+    compatibility:
+      notice:
+        - '%prefix% 已将兼容性检查结果发送至日志。请查看控制台 :)'
+      usage:
+        - '%prefix% 用法：&b/%label% compatibility'
+
+
+# +-------------------------------------------------------------------------------------------LM3
+# +                                                                                          +LM3
+# +   Section 07 - Other Messages                                                            +LM3
+# +                                                                                          +LM3
+# +-------------------------------------------------------------------------------------------LM3
+other:
+  compatibility-notice:
+    enabled: true
+    messages:
+      - '%prefix% LevelledMobs 兼容性提醒：'
+      - '&8 &m->&r 已发现 &b%incompatibilities%&7 个可能的不兼容项。请执行“&b/levelledmobs compatibility&7”命令来进行兼容性检查。'
+      - '&8 &m->&7 此消息会被发送至所有拥有 &blevelledmobs.compatibility-notice&7 权限的用户。你可以在 &bmessages.yml&7 中禁用此消息。'
+      - '&8 &m->&7 请确保你已遵循插件 Wiki 页面的所有指引。'
+  update-notice:
+    messages:
+      - '&b&nLevelledMobs 更新检测提醒：'
+      - '&7你的 &bLevelledMobs&7 &b已不是最新版本&7！请尽快更新至 &bv%latestVersion%&7。&8（&7当前运行版本为 &bv%currentVersion%&8）'
+    send-in-console: true
+    send-on-join: true
+
+  mob-head-drop-name: '%mob_name%的头'
+
+
+# +-------------------------------------------------------------------------------------------LM3
+# +                                                                                          +LM3
+# +   Section 08 - Advanced Message Settings                                                 +LM3
+# +   DO NOT EDIT BEYOND HERE WITHOUT DEVELOPER APPROVAL                                     +LM3
+# +                                                                                          +LM3
+# +-------------------------------------------------------------------------------------------LM3
+file-version: 6
