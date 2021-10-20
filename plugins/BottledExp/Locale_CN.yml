@@ -8,7 +8,7 @@ Enchant: '&2本次附魔花费了 &3[xp]&2 点经验'
 GotExp: '&2你获得了 &3[xp]&2 点经验'
 Store:
   Name: '&6|   瓶装经验   |'
-  Lore: '&e已存储经验：'
+  BottleLore: '&e内含经验：&6[exp]'
   ExpLoreColor: '&6'
 command:
   help:
