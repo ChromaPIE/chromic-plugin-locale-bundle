@@ -1,6 +1,6 @@
 - 确保拥有服务器权限
 
-- 在控制台或聊天栏执行命令 /ecoenchants locale download kacilelura
+- 在控制台或聊天栏执行命令 /ecoenchants locale download jeyemalela
 
 - 执行命令 /ecoenchants reload
 
