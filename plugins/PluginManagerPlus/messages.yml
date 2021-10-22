@@ -1,0 +1,105 @@
+no-perms: '&c权限不足'
+player-only: '&c仅玩家可执行该命令'
+invalid-args: '&c参数无效。请输入 /pm'
+next: 下一个
+previous: 上一个
+back:
+  name: 返回
+  lore: '&7点击以返回'
+plugin-enable-message: 已启用 &a%s
+plugin-disable-message: 已禁用 &a%s
+plugin-reload-message: 已成功重载 &a%s
+common:
+  not-defined: 未指定
+base:
+  plugins:
+    name: 插件
+    click: '&b点击&7以查看插件列表'
+  whitelist:
+    name: 白名单
+    click: '&b点击&7以查看白名单设定'
+  scheduler:
+    name: 运行调度
+    running: '&7运行时长：'
+    previous: '&7上一次更新：'
+    next: '&7下一次更新：'
+player:
+  kicked: '&4一个必需插件已被禁用'
+  disallow: '&4该服务器已启用白名单。'
+whitelist:
+  warning_1: '&4警告：你正试图将一个已被禁用的插件加入白名单。'
+  warning_2: '&4该操作将导致缺少 &epm.bypass &4权限的玩家被踢出服务器！'
+  already: '&4该插件已在白名单中！'
+  specify: '&a指定你想要纳入白名单的插件。'
+  confirm: '&a输入 yes 以确认，输入 no 以否定。'
+  add:
+    name: 纳入白名单
+    click: '&b点击&7以指定想要纳入白名单的插件'
+    remove: '&b点击中键&7以移除白名单。'
+search:
+  specify: '&a请输入内容以搜索包含输入字段的特定插件。'
+query:
+  set: 搜索插件
+  specify: '&7输入内容以&6过滤&7插件列表。'
+  clear:
+    name: 清空搜索
+options:
+  button:
+    name: 更多选项
+    lore: '&7点击以展开更多选项'
+  enable:
+    name: 启用插件
+    lore: '&b点击&7以启用所有已禁用的插件。'
+    success: '&a已启用所有插件。'
+  reload:
+    name: 重新载入插件文件夹
+    lore: '&b点击&7以刷新插件管理器。'
+    success: '&a刷新所有插件。'
+  disable:
+    name: 禁用插件
+    lore: '&b点击&7以禁用所有已启用的插件。'
+    success: '&a已禁用所有插件。'
+plugin:
+  running-time: '&7运行时长：'
+  enabled-by: '&7启用者：'
+  manage: '&7点击以&b管理&7该插件。'
+  basic:
+    name: 基本信息
+    pl-name: '&7名称：'
+    version: '&7版本：'
+    main: '&7主类：'
+    load: '&7加载阶段：'
+  cmd-list:
+    name: 命令列表
+    click: '&7点击以&b查看&7命令'
+    count: '&7总数：'
+    source: '&7来源：'
+  authors:
+    name: 作者
+  desc:
+    name: 描述
+  depend:
+    name: 依赖项
+  before:
+    name: 作为前序加载
+  api:
+    name: API 版本
+  website:
+    name: 网站
+  soft:
+    name: 软性依赖项
+  enable:
+    name: 启用插件
+    lore: '&7点击此处以启用插件'
+  reload:
+    name: 重载插件
+    lore: '&7点击此处以&b重新载入&7插件'
+  disable:
+    name: 禁用插件
+    lore: '&7点击此处以禁用插件'
+commands:
+  click: '&7点击以&b%s。'
+  usage: '&7用法：'
+  permission: '&7权限要求：'
+  description: '&7描述：'
+  aliases: '&7同效命令：'
